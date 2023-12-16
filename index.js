@@ -59,10 +59,12 @@ function createNewCard(idx = myLibrary.length - 1) {
 			bookRead.classList.remove('book-read');
 			bookRead.classList.add('not-read');
 			bookRead.textContent = 'Not Read';
+			myLibrary[idx].read = false;
 		} else {
 			bookRead.classList.add('book-read');
 			bookRead.classList.remove('not-read');
 			bookRead.textContent = 'Read!';
+			myLibrary[idx].read = true;
 		}
 	});
 
